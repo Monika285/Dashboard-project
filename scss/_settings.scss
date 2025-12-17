@@ -1,0 +1,35 @@
+.setting-item {
+  background: $card-bg;
+  border-radius: $border-radius;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: $shadow;
+
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .rating {
+    display: flex;
+    gap: 5px;
+    font-size: 2rem;
+    cursor: pointer;
+
+    .star { transition: color 0.2s; }
+    .star.selected, .star:hover, .star:hover ~ .star { color: gold; }
+  }
+
+  button {
+    padding: 8px 15px;
+    border: none;
+    background: $btn-color;
+    color: $btn-text;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}

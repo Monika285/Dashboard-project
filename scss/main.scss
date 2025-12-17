@@ -1,0 +1,171 @@
+@use "sass:color";
+
+$primary-color: #1e1e3f;
+$secondary-color: #f0f4f8;
+$accent-color: #4a90e2;
+$card-bg: #fff;
+$text-color: #222;
+$btn-color: #4a90e2;
+$btn-text: #fff;
+$border-radius: 12px;
+$shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: $secondary-color;
+  color: $text-color;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $primary-color;
+  color: #fff;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .logo { font-size: 1.5rem; font-weight: bold; }
+  nav ul { display: flex; list-style: none; gap: 25px; margin: 0; padding: 0; }
+  nav ul li a { color: #fff; text-decoration: none; font-weight: 500; }
+  nav ul li a:hover { text-decoration: underline; }
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px 20px;
+}
+
+.section { margin-bottom: 60px; }
+.section h2 { text-align: center; color: $primary-color; margin-bottom: 25px; }
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 30px;
+
+  .card {
+    background: $card-bg;
+    padding: 20px;
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+    width: 180px;
+    text-align: center;
+
+    h3 { color: $primary-color; margin-bottom: 10px; }
+    p { font-size: 1.5rem; font-weight: bold; }
+  }
+}
+
+.update-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  input { padding: 8px; border-radius: 6px; border: 1px solid #ccc; }
+  button { 
+    background: $btn-color; 
+    color: $btn-text; 
+    border: none; 
+    padding: 8px 15px; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    transition: background 0.3s; 
+  }
+  button:hover {
+    background: color.adjust($btn-color, $lightness: -10%);
+  }
+}
+
+.user-table { 
+  width: 80%; 
+  margin: 0 auto; 
+  border-collapse: collapse; 
+  text-align: center;
+
+  th, td { border: 1px solid #ccc; padding: 10px; }
+  th { background: $primary-color; color: #fff; }
+}
+
+textarea { 
+  width: 80%; 
+  display: block; 
+  margin: 0 auto 10px; 
+  padding: 10px; 
+  border-radius: 6px; 
+  border: 1px solid #ccc; 
+}
+
+.rating { 
+  display: flex; 
+  justify-content: center; 
+  gap: 8px; 
+  font-size: 2rem; 
+  cursor: pointer;
+
+  .star { color: #ccc; transition: color 0.2s; }
+  .star.hover, .star.selected { color: gold; }
+}
+
+@media(max-width:768px){
+  .cards { flex-direction: column; align-items: center; }
+}
+
+/* Login Page */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, $accent-color, $primary-color);
+
+  .login-card {
+    background: $card-bg;
+    padding: 40px 30px;
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+    text-align: center;
+    width: 320px;
+
+    h2 {
+      margin-bottom: 25px;
+      color: $primary-color;
+      font-size: 1.8rem;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px 0;
+      border: none;
+      border-radius: 6px;
+      background: $btn-color;
+      color: $btn-text;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: color.adjust($btn-color, $lightness: -10%);
+      }
+    }
+  }
+}

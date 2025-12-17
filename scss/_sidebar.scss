@@ -1,0 +1,12 @@
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 200px;
+  background: $primary-color;
+  height: 100%;
+  padding: 20px;
+  ul { list-style: none; }
+  li { margin-bottom: 15px; }
+  a { color: #fff; text-decoration: none; display: block; }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- Horizontal Navbar -->
+  <header class="navbar">
+    <div class="logo">Admin Dashboard</div>
+    <nav>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#reports">Reports</a></li>
+        <li><a href="#settings">Settings</a></li>
+        <li><a href="#" id="logoutBtn">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-container">
+
+    <!-- Overview Section -->
+    <section id="overview" class="section">
+      <h2>Dashboard Overview</h2>
+      <div class="cards">
+        <div class="card"><h3>Users</h3><p id="usersCard">—</p></div>
+        <div class="card"><h3>Revenue</h3><p id="revenueCard">—</p></div>
+        <div class="card"><h3>System Status</h3><p id="statusCard">Not set</p></div>
+        <div class="card"><h3>Reports</h3><p id="reportsCard">0</p></div>
+      </div>
+
+      <div class="update-form">
+        <input type="text" id="userInput" placeholder="Enter Username">
+        <input type="number" id="revenueInput" placeholder="Enter Revenue">
+        <button id="addUserBtn">Add User</button>
+      </div>
+
+      <table class="user-table">
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Revenue</th>
+          </tr>
+        </thead>
+        <tbody id="userTableBody">
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Reports Section -->
+    <section id="reports" class="section">
+      <h2>Reports</h2>
+      <div class="report-item">
+        <h3 class="report-toggle">Report an Issue</h3>
+        <div class="report-content">
+          <textarea id="reportText" placeholder="Describe your issue..."></textarea>
+          <button id="submitReport">Submit</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Settings Section -->
+    <section id="settings" class="section">
+      <h2>Settings</h2>
+      <div class="setting-item">
+        <h3>How's Your Experience?</h3>
+        <textarea id="experienceText" placeholder="Write your experience..."></textarea>
+        <button id="submitExperience">Submit</button>
+      </div>
+      <div class="setting-item">
+        <h3>Ratings</h3>
+        <div class="rating">
+          <span class="star" data-value="1">&#9733;</span>
+          <span class="star" data-value="2">&#9733;</span>
+          <span class="star" data-value="3">&#9733;</span>
+          <span class="star" data-value="4">&#9733;</span>
+          <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <button id="submitRating">Submit</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

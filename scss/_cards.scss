@@ -1,0 +1,45 @@
+.main-container { padding: 90px 30px 30px; }
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  .card {
+    background: $card-bg;
+    flex: 1 1 220px;
+    max-width: 220px;
+    padding: 20px;
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+    text-align: center;
+
+    h3 { font-size: 1.2rem; margin-bottom: 12px; color: $primary-color; }
+    p { font-size: 1.5rem; font-weight: bold; }
+  }
+}
+
+.update-form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+
+  input {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 120px;
+  }
+
+  button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    background: $btn-color;
+    color: $btn-text;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}

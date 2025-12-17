@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: #f0f4f8;
+  color: #222;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e1e3f;
+  color: #fff;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.navbar nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+.navbar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.navbar nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px 20px;
+}
+
+.section {
+  margin-bottom: 60px;
+}
+
+.section h2 {
+  text-align: center;
+  color: #1e1e3f;
+  margin-bottom: 25px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+.cards .card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  width: 180px;
+  text-align: center;
+}
+.cards .card h3 {
+  color: #1e1e3f;
+  margin-bottom: 10px;
+}
+.cards .card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.update-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.update-form input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.update-form button {
+  background: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.update-form button:hover {
+  background: rgb(34.3857142857, 117.3857142857, 214.6142857143);
+}
+
+.user-table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+.user-table th, .user-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.user-table th {
+  background: #1e1e3f;
+  color: #fff;
+}
+
+textarea {
+  width: 80%;
+  display: block;
+  margin: 0 auto 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.rating .star {
+  color: #ccc;
+  transition: color 0.2s;
+}
+.rating .star.hover, .rating .star.selected {
+  color: gold;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Login Page */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #4a90e2, #1e1e3f);
+}
+.login-page .login-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 320px;
+}
+.login-page .login-card h2 {
+  margin-bottom: 25px;
+  color: #1e1e3f;
+  font-size: 1.8rem;
+}
+.login-page .login-card input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.login-page .login-card button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-radius: 6px;
+  background: #4a90e2;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.login-page .login-card button:hover {
+  background: rgb(34.3857142857, 117.3857142857, 214.6142857143);
+}
+
+/*# sourceMappingURL=main.css.map */
